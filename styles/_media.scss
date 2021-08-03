@@ -1,0 +1,401 @@
+@media screen and (min-width: 768px){
+    /* header */
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 86px 0px 86px;
+        .menu-bar{
+            .btn-menu{
+                display: none;
+            }
+        }
+        .menu-total{
+            position: unset;
+            top: unset;
+            left: unset;
+            width: unset;
+            height: unset;
+            background-color: inherit;
+            transition: inherit;
+            display: flex;
+            align-items: center;
+            ul{
+                flex-flow: row nowrap;
+                li{
+                    color: $color-principal;
+                }
+            }
+        }
+    }
+
+    main{
+        /* Principal con imagen / barra de busqueda */
+        .seccion-principal{
+            .principal-container{
+                h1{
+                    width: 443px;
+                    height: 100px;
+                }
+                img{
+                    width: 399px;
+                    height: 190px;
+                }
+                .principal-container-input{
+                    input{
+                        width: 551px;
+                    } 
+                }
+                .contenedor-sugerencias{
+                    left: 13px;
+                    width: 551px;
+                }
+            }
+        }
+
+        /* Result Search */
+        .seccion-busqueda-resultados{
+            .contenedor-busqueda-resultados{           
+                .item{
+                    img{
+                        width: 260px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        // favorites 
+        .favorite{
+            .seccion-resultado-favorito{
+                .contenedor-resultado{
+                    .item-favorite{
+                        img{
+                            width: 260px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+            .description-empty-favorite-section{
+                .description-empty-favorite-container{
+                    h2{
+                        width: 431px;
+                    }
+                }
+            }
+        }
+
+        /* Mis Gifos */
+        .misGifos{
+            .misGifos_render{
+                .misGifos_render_container{
+                    .item-gifos{
+                        img{
+                            width: 260px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+            .description-empty-misGifos-section{
+                .description-empty-misGifos-container{
+                    h2{
+                        width: 375px;
+                    }
+                }
+            }
+        }
+
+        /* Slider de Gifos */
+        .carrusel{
+            .slick-list{
+                max-width: 65vw;
+            }
+        }
+
+        /* Modal */
+        .modal {
+            &__content {
+                padding: 67px 268px;
+                & > img {
+                    right: 278px;
+                }
+                &__card {
+                    width: 695px;
+                    &__image {
+                        max-width: initial;
+                        width: 100%;
+                        height: 385px;
+                    }
+                    &__info {
+                        padding-top: 27px;
+                        & img {
+                            width: 27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* footer */
+    footer{
+        flex-flow: row nowrap;
+        height: 116px;
+        align-items: center;
+        .footer-social{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    main{
+        /* Slider de Gifos */
+        .carrusel{
+            .slick-list{
+                max-width: 74vw;
+                .slick-prev{
+                    left: 50px;
+                }
+                .slick-next{
+                    right: 50px;
+                }
+            }
+        }
+    }
+
+    /* footer */
+    footer{
+        .footer-social{
+            .iconos{
+                a:hover{                   
+                    .facebook{
+                        background-image: url(../assets/icon_facebook_hover.svg);
+                    }
+                    .twitter{
+                        background-image: url(../assets/icon-twitter-hover.svg);
+                    }
+                    .instagram{
+                        background-image: url(../assets/icon_instagram-hover.svg);
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1280px){
+    /* header */
+    header{
+        .menu-bar{
+            a{
+                width: 63px;
+                height: 60px;
+                background-image: url(../assets/logo-desktop.svg);
+            }
+        }
+        .menu-total{
+            ul{
+                li{
+                    a:hover{
+                        border-bottom: 2px solid $color-secondary;
+                    }
+                    a:active{
+                        color: #9CAFC3;
+                    }
+                }
+            }
+            .add{
+                align-items: center;
+                justify-content: center;
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                background-image: url(../assets/button-crear-gifo.svg);
+                cursor: pointer;
+                &:hover{
+                    background: $color-principal;
+                    background-image: url(../assets/CTA-crear-gifo-hover.svg);
+                }
+                &:active{
+                    background: #9CAFC3;
+                    background-image: url(../assets/CTA-crear-gifo-active.svg);
+                }
+            }
+        }
+    }
+    main{
+        /* Result Search */
+        .seccion-busqueda-resultados{
+            .contenedor-busqueda-resultados{           
+                .item{
+                    .overlay{
+                        display: flex;
+                        .icon-overlay{
+                            img{
+                                &:hover{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        .overlay{
+                            opacity: 0.7;
+                        }
+                    }
+                }      
+            }
+            .btn:hover{
+                background-color: $color-principal;
+                color: $color-white;
+            }
+        }
+
+        /* favorite */
+        .favorite{
+            .seccion-resultado-favorito{
+                .contenedor-resultado{
+                    .item-favorite{
+                        .overlay-favorite{
+                            display: flex;
+                            .icon-overlay-favorite{
+                                
+                                img{
+                                    &:hover{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            .overlay-favorite{
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Mis Gifos */
+        .misGifos{
+            .misGifos_render{
+                .misGifos_render_container{
+                    .item-gifos{
+                        .overlay-gifos{
+                            display: flex;
+                            .icon-overlay-gifos{
+                                img{
+                                    &:hover{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            .overlay-gifos{
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        /* Slider de Gifos */
+        .carrusel{
+            .slick-list{
+                max-width: 59vw;;
+                .slick-track {
+                    overflow-x: unset;
+                    .slick{
+                        .overlay-slider{
+                            display: flex;
+                            .icon-overlay-slider{
+                                img{
+                                    &:hover{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            .overlay-slider{
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+                .slick-arrow{
+                    display: flex;
+                }
+                .slick-prev{
+                    left: 120px;
+                    &:hover{
+                        background: $color-principal;
+                        img{ 
+                            filter: brightness(2000%);
+                        }
+                    }
+                }
+                .slick-next{
+                    right: 123px;
+                    &:hover{
+                        background: $color-principal;
+                        img{ 
+                            filter: brightness(2000%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1440px){
+    /* header */
+    header{
+        padding: 0px 156px 0px 156px;
+    }
+
+    main{
+        /* Result Search */
+        .seccion-busqueda-resultados{
+            .contenedor-busqueda-resultados{
+                width: 1280px;
+            }
+        }
+        
+        /* favorite */
+        .favorite{
+            .seccion-resultado-favorito{
+                .contenedor-resultado{
+                    width: 1280px;
+                }
+            }
+        }
+
+        /* Mis Gifos */
+        .misGifos{
+            .misGifos_render{
+                .misGifos_render_container{
+                    width: 1280px;
+                }
+            }
+        }
+
+        /* Slider de Gifos */
+        .carrusel{
+            .slick-list{
+                max-width: 53vw;
+                .slick-prev{
+                    left: 166px;
+                }
+                .slick-next{
+                    right: 169px;
+                }
+            }
+        }
+    }
+}

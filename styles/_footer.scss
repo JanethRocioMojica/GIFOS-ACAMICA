@@ -1,0 +1,46 @@
+footer{
+    font-family: $secondary-font;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-flow: column;
+    border-bottom: 5px solid $color-principal;
+    .footer-social{
+        p{
+            font-size: 15px;
+            color: #000000;
+            letter-spacing: 0;
+            padding: 20px 0px;
+        }
+        .iconos{
+            display: flex;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                color: inherit;
+                margin: 10px;
+            }
+            .facebook{
+                width: 9px;
+                height: 17px;
+                background-image: url(../assets/icon_facebook.svg);
+            }
+            .twitter{
+                width: 19px;
+                height: 17px;
+                background-image: url(../assets/icon-twitterter.svg);
+            }
+            .instagram{
+                width: 18px;
+                height: 18px;
+                background-image: url(../assets/icon_instagram.svg);
+            }
+        }
+    }
+    .footer-copy{
+        font-size: 14px;
+        padding: 20px 0px;
+    }
+}

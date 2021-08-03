@@ -1,0 +1,97 @@
+main{
+    /* Favorites */
+    .favorite{
+        display: none;
+        .seccion-favorito{
+            padding-top: 120px;
+            padding-bottom: 50px;
+            .contenedor-favorito{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column;
+                img{
+                    width: 28px;
+                    height: 21px;
+                }
+                h2{
+                    color: $color-principal;
+                    font-size: 25px;
+                    line-height: 30px;
+                }
+            }
+        }
+        .seccion-resultado-favorito{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+            .contenedor-resultado{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;
+                .item-favorite{
+                    position: relative;
+                    img{
+                        width: 156px;
+                        height: 120px;
+                        display: block;
+                    }
+                    .overlay-favorite{
+                        display: none;
+                        position: absolute;
+                        flex-flow: column;
+                        justify-content: space-between;
+                        background: $color-principal;
+                        opacity: 0;
+                        width: 100%;
+                        font-size: 20px;
+                        bottom: 0;
+                        color: $color-white;
+                        height: 100%;
+                        .icon-overlay-favorite{
+                            display: flex;
+                            justify-content: flex-end;
+                            img{
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 6px;
+                                background:  $color-white;
+                                opacity: 0.7;
+                                margin: 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        .text-overlay-favorite{
+                            margin: 0 0 5px 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .description-empty-favorite-section{
+            height: 500px;
+            .description-empty-favorite-container{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column;
+                img{
+                    width: 150px;
+                    height: 151px;
+                }
+                h2{
+                    color: $color-secondary;
+                    font-size: 22px;
+                    line-height: 33px;
+                    width: 320px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
